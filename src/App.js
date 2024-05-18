@@ -3,12 +3,13 @@ import React from "react";
 import GlobalStyle from "./Components/GlobalStyle";
 //import pages
 import AboutUs from "./pages/AboutUs";
+import Nav from "./Components/Nav";
 
 function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <h1>player</h1>
+      <Nav />
       <AboutUs />
     </div>
   );
