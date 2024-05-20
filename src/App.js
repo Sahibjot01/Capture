@@ -9,6 +9,7 @@ import OurWork from "./pages/OurWork";
 
 //router
 import { Route, Routes } from "react-router-dom";
+import WorkDetail from "./pages/WorkDetail";
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<AboutUs />} />
         <Route path="/work" element={<OurWork />} />
+        <Route path="/work/:id" element={<WorkDetail />} />
         <Route path="/contact" element={<ContactUs />} />
       </Routes>
     </div>
