@@ -16,8 +16,8 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<AboutUs />} />
-        <Route path="/work" element={<ContactUs />} />
-        <Route path="/contact" element={<OurWork />} />
+        <Route path="/work" element={<OurWork />} />
+        <Route path="/contact" element={<ContactUs />} />
       </Routes>
     </div>
   );

@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
         
     }
     h2{
-        font-weight: lighter;
+        font-weight: normal;
         font-size: 4rem;
     }
     h3{
