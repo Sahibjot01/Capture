@@ -56,7 +56,7 @@ export const photoAnimation = {
     scale: 1,
     transition: {
       duration: 0.75,
-      ease: "easeIn",
+      ease: "easeOut",
     },
   },
 };

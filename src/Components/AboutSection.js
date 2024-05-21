@@ -1,5 +1,6 @@
 import React from "react";
 import home1 from "../img/home1.png";
+import Wave from "./Wave";
 //styled component
 import {
   StyledAboutDiv,
@@ -42,6 +43,7 @@ const AboutSection = () => {
           alt="guy with a professional camea"
         />
       </StyledImageDiv>
+      <Wave></Wave>
     </StyledAboutDiv>
   );
 };
