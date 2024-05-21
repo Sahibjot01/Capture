@@ -8,24 +8,26 @@ import {
   StyledImageDiv,
 } from "../styles";
 import styled from "styled-components";
+//import framer motion
+import { motion } from "framer-motion";
 
 const AboutSection = () => {
   return (
     <StyledAboutDiv>
       <StyledDescriptionDiv>
-        <div className="title">
+        <motion.div>
           <StyledHideDiv>
-            <h2>We work to make</h2>
+            <motion.h2>We work to make</motion.h2>
           </StyledHideDiv>
           <StyledHideDiv>
-            <h2>
+            <motion.h2>
               your <span>dreams</span> come
-            </h2>
+            </motion.h2>
           </StyledHideDiv>
           <StyledHideDiv>
-            <h2>true.</h2>
+            <motion.h2>true.</motion.h2>
           </StyledHideDiv>
-        </div>
+        </motion.div>
         <p>
           Contact us for any photography or videography ideas that you have. We
           have professionals with amazing skills.
