@@ -26,7 +26,7 @@ const Nav = () => {
 };
 
 const StyledNav = styled.nav`
-  min-width: 10vh;
+  min-height: 10vh;
   display: flex;
   justify-content: space-between;
   margin: auto;

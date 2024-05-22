@@ -7,7 +7,14 @@ import theracer from "../img/theracer-small.png";
 import goodtimes from "../img/goodtimes-small.png";
 //framer motion
 import { motion } from "framer-motion";
-import { pageAnimation } from "../animation";
+import {
+  pageAnimation,
+  fadeAnimation,
+  photoAnimation,
+  lineAnimation,
+  sliderAnimation,
+  sliderContainer,
+} from "../animation";
 
 const OurWork = () => {
   return (
@@ -17,11 +24,19 @@ const OurWork = () => {
       animate="show"
       exit="exit"
     >
+      <motion.div variants={sliderContainer}>
+        <Frame1 variants={sliderAnimation}></Frame1>
+        <Frame2 variants={sliderAnimation}></Frame2>
+        <Frame3 variants={sliderAnimation}></Frame3>
+        <Frame4 variants={sliderAnimation}></Frame4>
+      </motion.div>
       <StyledMovieDiv>
-        <h2>The Athlete</h2>
-        <div className="line"></div>
+        <motion.h2 variants={fadeAnimation}>The Athlete</motion.h2>
+        <motion.div variants={lineAnimation} className="line"></motion.div>
         <Link to="/work/the-athlete">
-          <img src={athlete} alt="athlete" />
+          <StyledHideDiv>
+            <motion.img variants={photoAnimation} src={athlete} alt="athlete" />
+          </StyledHideDiv>
         </Link>
       </StyledMovieDiv>
       <StyledMovieDiv>
@@ -57,7 +72,7 @@ const StyledMovieDiv = styled.div`
   padding-bottom: 10rem;
   .line {
     height: 0.5rem;
-    background: #cccccc;
+    background: #23d997;
     margin-bottom: 3rem;
   }
   img {
@@ -65,6 +80,30 @@ const StyledMovieDiv = styled.div`
     height: 70vh;
     object-fit: cover;
   }
+`;
+const StyledHideDiv = styled.div`
+  overflow: hidden;
+`;
+
+//Frame Animation
+const Frame1 = styled(motion.div)`
+  position: fixed;
+  left: 0;
+  top: 10%;
+  width: 100%;
+  height: 100vh;
+  background: #fffebf;
+  z-index: 2;
+`;
+
+const Frame2 = styled(Frame1)`
+  background: #ff8efb;
+`;
+const Frame3 = styled(Frame1)`
+  background: #8ed2ff;
+`;
+const Frame4 = styled(Frame1)`
+  background: #8effa0;
 `;
 
 export default OurWork;
