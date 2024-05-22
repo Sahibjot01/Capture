@@ -1,7 +1,12 @@
 import React from "react";
+//import component
+import Toggle from "./Toggle";
 //import styled components
 import styled from "styled-components";
 import { StyledAboutDiv } from "../styles";
+//framer motion
+import { motion } from "framer-motion";
+import { fadeAnimation } from "../animation";
 
 const FaqSection = () => {
   return (
@@ -9,50 +14,42 @@ const FaqSection = () => {
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
-      <div className="question">
-        <h4>How Do I Start?</h4>
-        <div className="answer">
+      <Toggle title="How Do I Start?" layoutId="start">
+        <motion.div variants={fadeAnimation} className="answer">
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Necessitatibus, animi?
           </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>Daily Schedule</h4>
-        <div className="answer">
+        </motion.div>
+      </Toggle>
+      <Toggle title="Daily Schedule" layoutId="schedule">
+        <motion.div variants={fadeAnimation} className="answer">
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Necessitatibus, animi?
           </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>Different Payment Methods</h4>
-        <div className="answer">
+        </motion.div>
+      </Toggle>
+      <Toggle title="Different Payment Methods" layoutId="payment">
+        <motion.div variants={fadeAnimation} className="answer">
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Necessitatibus, animi?
           </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>What Product do you offer.</h4>
-        <div className="answer">
+        </motion.div>
+      </Toggle>
+      <Toggle title="What Product do you offer." layoutId="product">
+        <motion.div variants={fadeAnimation} className="answer">
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Necessitatibus, animi?
           </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
+        </motion.div>
+      </Toggle>
     </StyledFaqDiv>
   );
 };
