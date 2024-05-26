@@ -2,7 +2,7 @@ import React, { useState } from "react";
 //framer motion
 import { motion } from "framer-motion";
 const Toggle = ({ children, title, layoutId }) => {
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
 
   return (
     <motion.div

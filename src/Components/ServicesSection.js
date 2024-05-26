@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 //import icons
 import clock from "../img/clock.svg";
 import diaphragm from "../img/diaphragm.svg";
@@ -13,10 +13,19 @@ import {
   StyledImageDiv,
 } from "../styles";
 import styled from "styled-components";
+import { useScroll } from "./useScroll";
+import { fadeAnimation, scrollReveal } from "../animation";
 
 const ServicesSection = () => {
+  const [element, controls] = useScroll();
+
   return (
-    <StyledServicesDiv>
+    <StyledServicesDiv
+      animate={controls}
+      initial="hidden"
+      variants={fadeAnimation}
+      ref={element}
+    >
       <StyledDescriptionDiv>
         <h2>
           High <span>quality</span> services

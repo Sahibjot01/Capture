@@ -1,12 +1,15 @@
 import styled from "styled-components";
+//framer
+import { motion } from "framer-motion";
 //use this style to basically define reusabe style for components
-export const StyledAboutDiv = styled.div`
+export const StyledAboutDiv = styled(motion.div)`
   min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 5rem 10rem;
   color: #f5f5f5;
+  overflow: hidden;
 `;
 
 export const StyledDescriptionDiv = styled.div`

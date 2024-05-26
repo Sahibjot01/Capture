@@ -6,16 +6,29 @@ import styled from "styled-components";
 import { StyledAboutDiv } from "../styles";
 //framer motion
 import { motion } from "framer-motion";
-import { fadeAnimation } from "../animation";
+import { fadeAnimation, scrollReveal } from "../animation";
+//scroll animation
+import { useScroll } from "./useScroll";
 
 const FaqSection = () => {
+  const [element, controls] = useScroll();
   return (
-    <StyledFaqDiv>
+    <StyledFaqDiv
+      variants={scrollReveal}
+      animate={controls}
+      initial="hidden"
+      ref={element}
+    >
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
       <Toggle title="How Do I Start?" layoutId="start">
-        <motion.div variants={fadeAnimation} className="answer">
+        <motion.div
+          variants={fadeAnimation}
+          animate="show"
+          initial="hidden"
+          className="answer"
+        >
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -24,7 +37,12 @@ const FaqSection = () => {
         </motion.div>
       </Toggle>
       <Toggle title="Daily Schedule" layoutId="schedule">
-        <motion.div variants={fadeAnimation} className="answer">
+        <motion.div
+          variants={fadeAnimation}
+          animate="show"
+          initial="hidden"
+          className="answer"
+        >
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -33,7 +51,12 @@ const FaqSection = () => {
         </motion.div>
       </Toggle>
       <Toggle title="Different Payment Methods" layoutId="payment">
-        <motion.div variants={fadeAnimation} className="answer">
+        <motion.div
+          variants={fadeAnimation}
+          animate="show"
+          initial="hidden"
+          className="answer"
+        >
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -42,7 +65,12 @@ const FaqSection = () => {
         </motion.div>
       </Toggle>
       <Toggle title="What Product do you offer." layoutId="product">
-        <motion.div variants={fadeAnimation} className="answer">
+        <motion.div
+          variants={fadeAnimation}
+          animate="show"
+          initial="hidden"
+          className="answer"
+        >
           <p>Lorem ipsum dolor sit amet.</p>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -56,6 +84,7 @@ const FaqSection = () => {
 
 const StyledFaqDiv = styled(StyledAboutDiv)`
   display: block;
+  overflow: hidden;
   span {
     display: block;
   }
