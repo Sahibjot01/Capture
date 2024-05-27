@@ -6,6 +6,7 @@ import { MovieState } from "../movieState";
 //framer motion
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
+import ScrollTop from "../Components/ScrollTop";
 
 const WorkDetail = () => {
   const location = useLocation();
@@ -42,6 +43,7 @@ const WorkDetail = () => {
           <StyledImageDiv>
             <img src={movie.secondaryImg} alt="movie" />
           </StyledImageDiv>
+          <ScrollTop />
         </StyledDetailDiv>
       )}
     </>

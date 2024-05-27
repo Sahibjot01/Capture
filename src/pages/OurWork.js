@@ -9,6 +9,7 @@ import goodtimes from "../img/goodtimes-small.png";
 import { motion } from "framer-motion";
 //useScroll
 import { useScroll } from "../Components/useScroll";
+import ScrollTop from "../Components/ScrollTop";
 
 import {
   pageAnimation,
@@ -69,6 +70,7 @@ const OurWork = () => {
           <img src={goodtimes} alt="goodtimes" />
         </Link>
       </StyledMovieDiv>
+      <ScrollTop />
     </StyledWorkDiv>
   );
 };
