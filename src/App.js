@@ -1,16 +1,16 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  useLocation,
-} from "react-router-dom";
 import Nav from "./Components/Nav";
+//import global style
 import GlobalStyle from "./Components/GlobalStyle";
+//import pages
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import OurWork from "./pages/OurWork";
 import WorkDetail from "./pages/WorkDetail";
+
+//router
+import { Route, Routes, useLocation } from "react-router-dom";
+//framer motion
 import { AnimatePresence } from "framer-motion";
 
 function App() {
@@ -31,12 +31,4 @@ function App() {
   );
 }
 
-function AppWrapper() {
-  return (
-    <Router basename="/Capture">
-      <App />
-    </Router>
-  );
-}
-
-export default AppWrapper;
+export default App;
