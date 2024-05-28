@@ -50,6 +50,9 @@ const StyledContactDiv = styled(motion.div)`
   padding: 5rem 10rem;
   color: #353535;
   min-height: 90vh;
+  @media (max-width: 1500px) {
+    padding: 2rem 2rem;
+  }
 `;
 
 const StyledTitleDiv = styled.div`
@@ -57,6 +60,9 @@ const StyledTitleDiv = styled.div`
   color: black;
   h2 {
     font-weight: 600;
+  }
+  @media (max-width: 1500px) {
+    margin-top: 5rem;
   }
 `;
 
@@ -73,6 +79,11 @@ const StyledSocialDiv = styled(motion.div)`
   h2 {
     margin: 2rem;
     font-size: 3rem;
+  }
+  @media (max-width: 1500px) {
+    h2 {
+      font-size: 2rem;
+    }
   }
 `;
 export default ContactUs;

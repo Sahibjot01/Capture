@@ -52,6 +52,9 @@ const WorkDetail = () => {
 //styling
 const StyledDetailDiv = styled(motion.div)`
   color: white;
+  @media (max-width: 1360px) {
+    padding: 0rem 2rem;
+  }
 `;
 const StyledHeadlineDiv = styled.div`
   min-height: 90vh;
@@ -68,6 +71,11 @@ const StyledHeadlineDiv = styled.div`
     height: 70vh;
     object-fit: cover;
   }
+  @media (max-width: 1360px) {
+    h2 {
+      font-size: 3rem;
+    }
+  }
 `;
 const StyledAwardsDiv = styled.div`
   min-height: 80vh;
@@ -75,6 +83,10 @@ const StyledAwardsDiv = styled.div`
   margin: 5rem 10rem;
   align-items: center;
   justify-content: space-around;
+  @media (max-width: 1360px) {
+    display: block;
+    margin: 2rem 2rem;
+  }
 `;
 const StyledAwardDiv = styled.div`
   padding: 5rem;
@@ -97,6 +109,12 @@ const StyledImageDiv = styled.div`
     width: 100%;
     height: 100vh;
     object-fit: cover;
+  }
+  @media (max-width: 1360px) {
+    img {
+      object-fit: unset;
+      height: fit-content;
+    }
   }
 `;
 //Award Component

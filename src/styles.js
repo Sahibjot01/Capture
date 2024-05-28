@@ -10,6 +10,11 @@ export const StyledAboutDiv = styled(motion.div)`
   padding: 5rem 10rem;
   color: #f5f5f5;
   overflow: hidden;
+  @media (max-width: 1360px) {
+    display: block;
+    text-align: center;
+    padding: 2rem 2rem;
+  }
 `;
 
 export const StyledDescriptionDiv = styled.div`
@@ -18,6 +23,12 @@ export const StyledDescriptionDiv = styled.div`
   z-index: 2;
   h2 {
     font-weight: lighter;
+  }
+  @media (max-width: 1360px) {
+    padding: 0;
+    button {
+      margin: 3rem 0 5rem;
+    }
   }
 `;
 
